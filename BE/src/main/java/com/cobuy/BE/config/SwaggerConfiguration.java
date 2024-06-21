@@ -29,4 +29,9 @@ public class SwaggerConfiguration {
     public GroupedOpenApi boardApi() {
         return GroupedOpenApi.builder().group("board").pathsToMatch("/board/**").build();
     }
+
+    @Bean
+    public GroupedOpenApi chatApi() {
+        return GroupedOpenApi.builder().group("chat").pathsToMatch("/chat/**").build();
+    }
 }
