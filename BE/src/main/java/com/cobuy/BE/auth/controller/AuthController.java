@@ -102,7 +102,12 @@ public class AuthController {
     public ResponseEntity<? super SignUpResponseDto> signUp(
             @RequestBody @Valid SignUpRequestDto requestBody
     ) {
-        log.info("sign-up requsetBody= {}", requestBody);
+
+        /**
+         * password validateion 패턴 지정
+         * 하나 이상의 영문자와 숫자로 구성
+         * 8 ~ 13자 글자수 제한
+         */
 
         ResponseEntity<? super SignUpResponseDto> response = authService.signUp(requestBody);
         return response;
