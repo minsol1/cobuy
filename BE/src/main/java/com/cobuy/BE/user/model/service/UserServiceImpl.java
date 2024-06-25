@@ -1,8 +1,7 @@
-package com.cobuy.BE.auth.service.implement;
+package com.cobuy.BE.user.model.service;
 
-import com.cobuy.BE.auth.mapper.UserMapper;
+import com.cobuy.BE.user.model.mapper.UserMapper;
 import com.cobuy.BE.user.model.UserDto;
-import com.cobuy.BE.auth.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

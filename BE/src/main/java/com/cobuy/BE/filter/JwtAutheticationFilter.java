@@ -1,7 +1,7 @@
 package com.cobuy.BE.filter;
 
 import com.cobuy.BE.user.model.UserDto;
-import com.cobuy.BE.auth.service.UserService;
+import com.cobuy.BE.user.model.service.UserService;
 import com.cobuy.BE.provider.JwtProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

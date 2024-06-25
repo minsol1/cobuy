@@ -2,7 +2,7 @@ package com.cobuy.BE.auth.service.implement;
 
 import com.cobuy.BE.auth.dto.CustomOAuth2UserDto;
 import com.cobuy.BE.user.model.UserDto;
-import com.cobuy.BE.auth.service.UserService;
+import com.cobuy.BE.user.model.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;

@@ -1,4 +1,4 @@
-package com.cobuy.BE.auth.service;
+package com.cobuy.BE.user.model.service;
 
 import com.cobuy.BE.user.model.UserDto;
 

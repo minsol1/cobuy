@@ -1,7 +1,7 @@
 package com.cobuy.BE.auth.service.implement;
 
 import com.cobuy.BE.auth.mapper.CertificationMapper;
-import com.cobuy.BE.auth.mapper.UserMapper;
+import com.cobuy.BE.user.model.mapper.UserMapper;
 import com.cobuy.BE.auth.dto.CertificationDto;
 import com.cobuy.BE.user.model.UserDto;
 import com.cobuy.BE.auth.dto.request.auth.*;

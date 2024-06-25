@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace = "com.cobuy.BE.auth.mapper.UserMapper">
+<mapper namespace = "com.cobuy.BE.user.model.mapper.UserMapper">
 
     <!-- UserDto 매핑 -->
     <resultMap id="UserResultMap" type="com.cobuy.BE.user.model.UserDto">
