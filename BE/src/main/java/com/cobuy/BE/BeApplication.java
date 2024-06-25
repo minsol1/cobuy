@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value = {"com.cobuy.BE.board.model.mapper"})
+@MapperScan(value = {"com.cobuy.BE.board.model.mapper", "com.cobuy.BE.event.model.mapper"})
 public class BeApplication {
 
 	public static void main(String[] args) {

@@ -123,8 +123,8 @@ public class BoardController {
 
 import com.cobuy.BE.board.model.BoardDto;
 import com.cobuy.BE.board.model.BoardListDto;
-import com.cobuy.BE.board.model.FileInfoDto;
 import com.cobuy.BE.board.model.service.BoardService;
+import com.cobuy.BE.common.model.FileInfoDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

@@ -1,4 +1,4 @@
-package com.cobuy.BE.board.model;
+package com.cobuy.BE.event.model;
 
 import com.cobuy.BE.common.model.FileInfoDto;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -13,9 +13,9 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @ToString
-@Schema(title = "BoardDto : 게시글정보", description = "게시글의 상세 정보를 나타낸다.")
-public class BoardDto {
-    @Schema(description = "글번호")
+@Schema(title = "EventDto : 이벤트정보", description = "이벤트글의 상세 정보를 나타낸다.")
+public class EventDto {
+    @Schema(description = "이벤트번호")
     private int articleNo;
 
     @Schema(description = "글제목")
@@ -36,7 +36,21 @@ public class BoardDto {
     @Schema(description = "작성자 별명")
     private String nickName;
 
+    @Schema(description = "현재 인원")
+    private int currentPeople;
+
+    @Schema(description = "전체 인원")
+    private int totalPeople;
+
+    @Schema(description = "가격")
+    private int price;
+
+    @Schema(description = "거래지역")
+    private String location;
+
+    @Schema(description = "거래날짜")
+    private String transactionDate;
+
     @Schema(description = "업로드 파일정보")
     private List<FileInfoDto> fileInfos;
 }
-

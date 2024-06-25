@@ -1,7 +1,7 @@
 package com.cobuy.BE.board.model.mapper;
 
 import com.cobuy.BE.board.model.BoardDto;
-import com.cobuy.BE.board.model.FileInfoDto;
+import com.cobuy.BE.common.model.FileInfoDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.sql.SQLException;
