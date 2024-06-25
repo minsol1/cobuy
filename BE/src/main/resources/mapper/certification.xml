@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.cobuy.BE.auth.dao.CertificationDao">
+    <!-- CertificationDto 매핑 -->
+    <resultMap id="CertificationResultMap" type="com.cobuy.BE.auth.dto.CertificationDto">
+        <id property="userId" column="user_id" />
+        <result property="email" column="email" />
+        <result property="certificationNumber" column="certification_number" />
+    </resultMap>
+
+    <!-- Find by userId -->
+    <select id="findByUserId" resultMap="CertificationResultMap">
+        SELECT * FROM certification WHERE user_id = #{userId}
+    </select>
+
+    <!-- Delete by userId -->
+    <delete id="deleteByUserId">
+        DELETE FROM certification WHERE user_id = #{userId}
+    </delete>
+
+    <!-- Save Certification -->
+    <insert id="save">
+        INSERT INTO certification (user_id, email, certification_number)
+        VALUES (#{userId}, #{email}, #{certificationNumber})
+    </insert>
+</mapper>
