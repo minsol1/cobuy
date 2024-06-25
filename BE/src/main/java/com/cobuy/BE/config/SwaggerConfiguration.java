@@ -29,4 +29,10 @@ public class SwaggerConfiguration {
     public GroupedOpenApi boardApi() {
         return GroupedOpenApi.builder().group("board").pathsToMatch("/board/**").build();
     }
+
+    @Bean
+    public GroupedOpenApi authApi() {
+        return GroupedOpenApi.builder().group("auth").pathsToMatch("/auth/**").build();
+    }
+
 }

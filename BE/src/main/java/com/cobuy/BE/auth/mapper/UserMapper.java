@@ -1,10 +1,10 @@
-package com.cobuy.BE.auth.dao;
+package com.cobuy.BE.auth.mapper;
 
 import com.cobuy.BE.user.model.UserDto;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface UserDao{
+public interface UserMapper {
 
     boolean existsByUserId(String userId);
 

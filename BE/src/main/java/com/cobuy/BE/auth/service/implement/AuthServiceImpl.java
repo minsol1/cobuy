@@ -1,7 +1,7 @@
 package com.cobuy.BE.auth.service.implement;
 
-import com.cobuy.BE.auth.dao.CertificationDao;
-import com.cobuy.BE.auth.dao.UserDao;
+import com.cobuy.BE.auth.mapper.CertificationMapper;
+import com.cobuy.BE.auth.mapper.UserMapper;
 import com.cobuy.BE.auth.dto.CertificationDto;
 import com.cobuy.BE.user.model.UserDto;
 import com.cobuy.BE.auth.dto.request.auth.*;
@@ -23,8 +23,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class AuthServiceImpl implements AuthService {
 
-    private final UserDao userDao;
-    private final CertificationDao certificationDao;
+    private final UserMapper userMapper;
+    private final CertificationMapper certificationDao;
 
     private final JwtProvider jwtProvider;
     private final EmailProvider emailProvider;
@@ -36,7 +36,7 @@ public class AuthServiceImpl implements AuthService {
 
         try {
             String userId = dto.getId();
-            boolean isExistId = userDao.existsByUserId(userId);
+            boolean isExistId = userMapper.existsByUserId(userId);
 
             if (isExistId)
                 return IdCheckResponseDto.duplicateId();
@@ -55,7 +55,7 @@ public class AuthServiceImpl implements AuthService {
             String userId = dto.getId();
             String email = dto.getEmail();
 
-            boolean isExistId = userDao.existsByUserId(userId);
+            boolean isExistId = userMapper.existsByUserId(userId);
 
             if (isExistId)
                 return EmailCertificationResponseDto.duplicateId();
@@ -113,7 +113,7 @@ public class AuthServiceImpl implements AuthService {
             log.info("singup실행");
             String userId = dto.getId();
 
-            boolean isExistedId = userDao.existsByUserId(userId);
+            boolean isExistedId = userMapper.existsByUserId(userId);
             if (isExistedId)
                 return SignUpResponseDto.duplicateId();
 
@@ -133,7 +133,7 @@ public class AuthServiceImpl implements AuthService {
             dto.setPassword(encodedPassword);
 
             UserDto userDto = new UserDto(dto);
-            userDao.save(userDto);
+            userMapper.save(userDto);
 
             certificationDao.deleteByUserId(userId);
 
@@ -152,7 +152,7 @@ public class AuthServiceImpl implements AuthService {
 
         try {
             String userId = dto.getId();
-            UserDto userDto = userDao.findByUserId(userId);
+            UserDto userDto = userMapper.findByUserId(userId);
 
             log.info("signIn.SignInRequestDto = {}", dto);
             if(userDto == null) SignInResponseDto.signInfail();
