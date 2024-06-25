@@ -1,4 +1,4 @@
-package com.cobuy.BE.board.model;
+package com.cobuy.BE.common.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

@@ -3,8 +3,8 @@ package com.cobuy.BE.board.model.service;
 
 import com.cobuy.BE.board.model.BoardDto;
 import com.cobuy.BE.board.model.BoardListDto;
-import com.cobuy.BE.board.model.FileInfoDto;
 import com.cobuy.BE.board.model.mapper.BoardMapper;
+import com.cobuy.BE.common.model.FileInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
